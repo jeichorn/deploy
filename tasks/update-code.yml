@@ -4,6 +4,7 @@
   local_action: command date -u +%Y%m%d%H%M%SZ
   run_once: true
   register: ansistrano_timestamp
+  sudo: no
 
 - name: ANSISTRANO | Set release version from timestamp
   set_fact: ansistrato_release_version="{{ ansistrano_timestamp.stdout }}"
