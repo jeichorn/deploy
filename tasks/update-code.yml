@@ -7,7 +7,7 @@
   sudo: no
 
 - name: ANSISTRANO | Set release version from timestamp
-  set_fact: ansistrato_release_version="{{ ansistrano_timestamp.stdout }}"
+  set_fact: ansistrano_release_version="{{ ansistrano_timestamp.stdout }}"
   when: ansistrano_release_version is not defined
 
 - name: ANSISTRANO | Get release path
